@@ -18,7 +18,7 @@ int main()
     printf("How many hours did you work on Sunday? (including all breaks)\n");
     scanf("%f", &sun_hours);
 
-    printf("How many hours did you work on Weekdays (including allbreaks)?\n");
+    printf("How many hours did you work on Weekdays (including all breaks)?\n");
     scanf("%f", &week_hours);
 
     if (sat_hours >= 5) {
@@ -34,7 +34,7 @@ int main()
     }
 
     if (week_hours >= 5) {
-        printf("How many Weekday shifts were 5 or more hours \n(How many unpaid 30mins did you take)?\n");
+        printf("How many Weekday shifts were 5 hours or more \n(How many unpaid 30mins did you take)?\n");
         scanf("%f", &week_meals);
     } else {
         week_hours = 0;
