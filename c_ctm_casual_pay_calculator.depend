@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1579604016 source:/Users/admin/Documents/c_programs/c_ctm_casual_pay_calculator/main.c
+	<stdio.h>
+	<stdlib.h>
+
