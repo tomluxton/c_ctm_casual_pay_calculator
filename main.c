@@ -1,8 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 int main()
 {
+    calc_pay();
+    return 0;
+}
+
+calc_pay() {
     const float BASE = 26.93;
 
     float week_hours;
@@ -13,6 +19,7 @@ int main()
     float week_meals;
     float pay;
 
+    char calc_again;
     printf("How many hours did you work on Saturday? (including all breaks)\n");
     scanf("%f", &sat_hours);
     printf("How many hours did you work on Sunday? (including all breaks)\n");
@@ -43,5 +50,14 @@ int main()
     pay = ((sat_hours - (sat_meals * 0.5)) * 1.25 + (sun_hours - (sun_meals * 0.5)) * 1.5 + week_hours - week_meals * 0.5) * BASE;
 
     printf("Your pay for the week is: $%f\n", pay);
-    return 0;
+
+    printf("Would you like to calculate again? (y or n)\n");
+    scanf(" %c", &calc_again);
+
+    if (calc_again == 'y') {
+        calc_pay();
+    } else {
+        printf("Thank you!");
+        exit(0);
+    }
 }
